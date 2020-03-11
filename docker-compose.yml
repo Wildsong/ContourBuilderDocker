@@ -6,6 +6,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+      - "5678:5678"
     volumes:
-      C:/Users/bwilson/source/repos/LiDAR:/data
+      - C:/Users/bwilson/source/repos/LiDAR:/data
   

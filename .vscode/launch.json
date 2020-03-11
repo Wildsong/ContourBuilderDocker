@@ -22,6 +22,26 @@
             "jinja": true
         },
         {
+            "name": "Docker: Python - Flask",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "python": {
+                "pathMappings": [
+                    {
+                        "localRoot": "${workspaceFolder}",
+                        "remoteRoot": "/app"
+                    }
+                ],
+                "projectType": "flask"
+            },
+            "dockerServerReadyAction": {
+                "action": "openExternally",
+                "pattern": "Starting development server at (https?://\\S+|[0-9]+)",
+                "uriFormat": "%s://localhost:%s/"
+            }
+        },
+        {
             "name": "Docker: Python - General",
             "type": "docker",
             "request": "launch",
@@ -35,6 +55,19 @@
                 ],
                 "projectType": "general"
             }
+        },
+        {
+            "name": "Python: Remote Attach",
+            "type": "python",
+            "request": "attach",
+            "port": 5678,
+            "host": "localhost",
+            "pathMappings": [
+              {
+                "localRoot": "${workspaceFolder}",
+                "remoteRoot": "/app"
+              }
+            ]
         }
     ]
 }

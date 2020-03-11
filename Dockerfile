@@ -17,4 +17,5 @@ ADD . /app
 VOLUME /data
 
 # During debugging, this entry point will be overridden. For more information, refer to https://aka.ms/vscode-docker-python-debug
-CMD ["python", "app.py"]
+EXPOSE 5000
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--log-level", "debug", "--timeout", "120", "app:app"]
