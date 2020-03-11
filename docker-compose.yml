@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  contourbuilderdocker:
+    image: contourbuilderdocker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      C:/Users/bwilson/source/repos/LiDAR:/data
+  
