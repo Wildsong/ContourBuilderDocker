@@ -1,9 +1,10 @@
 # ContourBuilderDocker
+
 Workflow for building topo contours inside a Docker container
 
-** 2020-Mar-11 THIS IS A WORK IN PROGRESS EITHER OFFER TO HELP OR COME BACK LATER!!! --Brian **
+**2020-Mar-11 THIS IS A WORK IN PROGRESS EITHER OFFER TO HELP OR COME BACK LATER!!! --Brian**
 
-== Overview 
+## Overview 
 
 The goal here is to create a Docker image that can build contours
 using GDAL in Python scripts.  Using a Docker is far easier to install
@@ -17,7 +18,7 @@ python scripts, and that means I need a practical way to debug them.
 SO, along the way, I am learning how to use Visual Studio Code (VSC)
 to edit and debug code that lives inside a running Docker container.
 
-== Flask
+## Starting with Flask
 
 Step one is to get any old Python app running in a Docker.  To do
 this, I will first get the app running in the local machine to confirm
@@ -34,22 +35,26 @@ Refer to https://code.visualstudio.com/docs/python/environments
 Open a Terminal in VSC and create and activate the environment.
 Set policy so you don't get the policy error. Install other packages
 
-   py -3 -m venv .venv
-   .venv/Scripts/activate.ps1
-   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-   py -m pip install -r requirements.txt
+```bash
+py -3 -m venv .venv
+.venv/Scripts/activate.ps1
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+py -m pip install -r requirements.txt
+```
 
 In the VSC Debugger panel (at the very top) set the project type to
 "Python: Flask", and run debugger with F5. The task bar turns from
 blue to orange.  Navigate to http://127.0.0.1:5000/ in a browser. It
 works in the browser, and you should see feedback in the Terminal:
 
-   127.0.0.1 - - [11/Mar/2020 09:40:02] "GET / HTTP/1.1" 200 -
-   127.0.0.1 - - [11/Mar/2020 09:40:02] "GET /favicon.ico HTTP/1.1" 404 -
+```bash
+127.0.0.1 - - [11/Mar/2020 09:40:02] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2020 09:40:02] "GET /favicon.ico HTTP/1.1" 404 -
+```
 
 Exit the debugger with shift-F5.
 
-==Flask in Docker
+## Move Flask into Docker
 
 Next the app has to run in Docker.
 Refer to https://code.visualstudio.com/docs/containers/quickstart-python
@@ -75,6 +80,7 @@ In the VSC Debugger drop down list I switch from "Python: Flask" to "Docker: Pyt
 
 BUT it does not work yet! To be continued.
 
+## Debug a Python geoscript in Docker
 
-
+TBD
 
