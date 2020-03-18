@@ -1,8 +1,6 @@
 import sys
 import os
 
-print("version", sys.version)
-
 data = "/data"
 
 # Find all the bare earth coverages

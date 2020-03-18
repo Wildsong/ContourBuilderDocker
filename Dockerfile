@@ -16,6 +16,8 @@ ADD . /app
 
 VOLUME /data
 
+# Start a Waitress server to run the app, and set the port as desired.
+EXPOSE 8080
+
 # During debugging, this entry point will be overridden. For more information, refer to https://aka.ms/vscode-docker-python-debug
-EXPOSE 5000
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--log-level", "debug", "--timeout", "120", "app:app"]
+# CMD ["gunicorn", "--bind", "0.0.0.0:8080", "start_flask:app"]
