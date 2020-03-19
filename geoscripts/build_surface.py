@@ -1,10 +1,9 @@
 import sys
 import os
 
-data = "/data"
+def build_surface(datadir):
+    # Find all the bare earth coverages
 
-# Find all the bare earth coverages
-
-for f in os.listdir(data):
-    print(f)
+    for f in os.listdir(datadir):
+        print(f)
 
