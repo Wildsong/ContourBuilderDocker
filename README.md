@@ -2,7 +2,7 @@
 
 Workflow for building topo contours inside a Docker container
 
-**2020-Mar-17 THIS IS A WORK IN PROGRESS EITHER OFFER TO HELP OR COME BACK LATER!!! --Brian**
+**2020-Mar-19 THIS IS A WORK IN PROGRESS EITHER OFFER TO HELP OR COME BACK LATER!!! --Brian**
 
 ## Overview 
 
